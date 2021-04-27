@@ -1,38 +1,174 @@
 .App {
   text-align: center;
+  font-family: "Lato", sans-serif;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.app-content{
+  height: 70vh;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.app-wrapper{
+  margin-left: 10%;
+  margin-right: 10%;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+/* GENERAL STUFF */
+
+.red-text{
+  color: #CE1212;
 }
 
-.App-link {
-  color: #61dafb;
+/* NAVBAR STUFF */
+
+.navbar-wrapper{
+  margin-top: 5%;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.navbar-wrapper .aux-navbar .link{
+  color: #810000;
+  font-weight: 500;
+  font-size: 18px;
+  margin-left: 15px;
+}
+
+/* FOOTER STUFF */
+
+.footer-wrapper{
+  margin-bottom: 30px;
+}
+
+.aux-footer .copyright-text{
+  color: #810000;
+  font-weight: 500;
+  font-size: 18px;
+}
+
+/* HOME PAGE */
+
+.home-wrapper{
+  margin-top: 8%;
+}
+
+.home-wrapper .hero-text{
+  font-size: 50px;
+  font-weight: 800;
+  color: #810000;
+}
+
+.home-wrapper .hero-action{
+  margin-top: 40px;
+}
+
+.home-wrapper .hero-action .compose-button{
+  padding: 10px;
+  padding-left: 20px;
+  padding-right: 20px;
+  color: #ffffff;
+  background-color: #CE1212;
+  border-radius: 10px;
+  box-shadow: 5px 0px 10px 2px rgba(124, 157, 247, 0.1);
+  transition: .2s;
+  font-size: 25px;
+  font-weight: 500;
+}
+
+.home-wrapper .hero-action .compose-button:hover{
+  cursor: pointer;
+  text-decoration: none;
+  background-color: #e90d0d;
+}
+
+.home-wrapper .hero-action .hero-action-item{
+  margin-right: 15px;
+  margin-left: 15px;
+}
+
+/* CREATE PAGE */
+
+.create-wrapper{
+  margin-top: 8%;
+}
+
+.create .composer-prompt{
+  font-size: 50px;
+  font-weight: 800;
+  color: #810000;
+}
+
+.create .composer-choices {
+  margin-top: 30px;
+}
+
+.create .composer-choices .composer-choice{
+  margin-left: 10px;
+  margin-right: 10px;
+  padding: 5px;
+  padding-left: 25px;
+  padding-right: 25px;
+  background-color: #FDFDFD;
+  border: 1px solid #E2E2E2;
+  border-radius: 10px;
+  color: #810000;
+  font-size: 25px;
+  font-weight: 500;
+  
+}
+
+.create .composer-choices .composer-choice:hover{
+  cursor: pointer;
+  box-shadow: 0px 0px 5px 2px rgba(124, 157, 247, 0.1);
+}
+
+.create .composer-choices .composer-choice.selected{
+  background-color: #CE1212;
+  border: 1px solid #CE1212;
+  color: #ffffff;
+}
+
+.create .num-notes-prompt-wrapper{
+  margin-top: 100px;
+}
+
+.create .num-notes-prompt{
+  font-size: 40px;
+  font-weight: 800;
+  color: #810000;
+}
+
+.create .current-number-of-notes{
+  margin-top: 40px;
+  font-size: 40px;
+  font-weight: 800;
+  color: #CE1212;
+}
+
+.create .num-notes-slider-wrapper{
+  margin-top: 30px;
+}
+
+.create .generate-button-wrapper{
+  margin-top: 80px;
+}
+
+.create .generate-button{
+  padding: 10px;
+  padding-left: 20px;
+  padding-right: 20px;
+  color: #ffffff;
+  background-color: #CE1212;
+  border-radius: 10px;
+  box-shadow: 5px 0px 10px 2px rgba(124, 157, 247, 0.1);
+  transition: .2s;
+  font-size: 25px;
+  font-weight: 500;
+}
+
+.create .generate-button:hover{
+  cursor: pointer;
+  background-color: #e90e0e;
+  text-decoration: none;
+}
+
+.create .loading-gif{
+  margin-left: 20px;
 }
