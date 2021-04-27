@@ -16,9 +16,9 @@ const Create = (props) => {
 
   const handleGenerateClick = () => {
     setIsLoading(true);
-    setTimeout(5000, () => {
+    setTimeout(() => {
         setIsLoading(false);
-    })
+    }, 10000);
     // axios
     //   //   .get(getGenerateUrl(composer, numNotes))
     //   .get(getComposersUrl())
