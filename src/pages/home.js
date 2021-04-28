@@ -38,31 +38,33 @@ const Home = (props) => {
                 Aux.ai is powered by an LSTM Deep Learning Model and was trained on music datasets of multiple
                 composers, using only the piano part as training data
               </div>
-              <div className="composers">
-                <span className="fas fa-user"></span> Composers
-              </div>
-              <div className="composer-list-wrapper">
-                <div className="row">
-                  <div className="col-md-2"></div>
-                  <div className="col-md-8">
-                    <div className="row">
-                      <div className="col-md-4">
-                        <div className="composer-item">Chopin</div>
-                      </div>
-                      <div className="col-md-4">
-                        <div className="composer-item">Rachmaninov</div>
-                      </div>
-                      <div className="col-md-4">
-                        <div className="composer-item">Tchaikovski</div>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div className="col-md-2"></div>
-                </div>
-              </div>
             </div>
             <div className="col-md-1"></div>
+          </div>
+        </div>
+        <div className="composers-wrapper text-center">
+          <div className="composers">
+            <span className="fas fa-user"></span> Composers
+          </div>
+          <div className="composer-list-wrapper">
+            <div className="row">
+              <div className="col-md-2"></div>
+              <div className="col-md-8">
+                <div className="row">
+                  <div className="col-md-4">
+                    <div className="composer-item">Chopin</div>
+                  </div>
+                  <div className="col-md-4">
+                    <div className="composer-item">Rachmaninov</div>
+                  </div>
+                  <div className="col-md-4">
+                    <div className="composer-item">Tchaikovski</div>
+                  </div>
+                </div>
+              </div>
+
+              <div className="col-md-2"></div>
+            </div>
           </div>
         </div>
       </div>

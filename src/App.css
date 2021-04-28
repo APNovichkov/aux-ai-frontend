@@ -74,26 +74,12 @@
 
 @keyframes animate {
   0% {
-    /* opacity: 0;
-    transform: translateY(-50px); */
     color: #40A7FF;
   }
-  2% {
-    /* opacity: 1;
-    transform: translateY(0px); */
-  }
-  18% {
-    /* opacity: 1;
-    transform: translateY(0px); */
-  }
   40%{
-    /* opacity: 0;
-    transform: translateY(50px); */
     color: #40FFF8;
   }
   100%{
-    /* opacity: 0;
-    transform: translateY(50px); */
     color: #40A7FF;
   }
 }
@@ -159,20 +145,25 @@
   font-weight: 400;
 }
 
-.home-wrapper .about-wrapper .composers{
+.home-wrapper .composers-wrapper{
+  margin-top: 50px;
+}
+
+.home-wrapper .composers-wrapper .composers{
   margin-top: 80px;
-  color: #ffffff;
+  color: #000D6F;
   font-size: 45px;
   font-weight: 600;
 }
 
-.home-wrapper .about-wrapper .composer-list-wrapper{
-  margin-top: 40px;
+.home-wrapper .composers-wrapper .composer-list-wrapper{
+  margin-top: 60px;
 }
 
-.home-wrapper .about-wrapper .composer-list-wrapper .composer-item{
+.home-wrapper .composers-wrapper .composer-list-wrapper .composer-item{
   color: #ffffff;
-  background-color: #020d77;
+  background-color: #1d8ef0;
+
   box-shadow: 0px 0px 5px 2px rgba(124, 157, 247, 0.1);
   padding: 15px;
   padding-left: 10px;
@@ -219,8 +210,8 @@
 }
 
 .create .composer-choices .composer-choice.selected{
-  background-color: #000D6F;
-  border: 1px solid #000D6F;
+  background-color: #439dec;
+  border: 1px solid #439dec;
   color: #ffffff;
 }
 
