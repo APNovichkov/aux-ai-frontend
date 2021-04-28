@@ -9,7 +9,7 @@ import { getGenerateUrl, getComposersUrl } from "./../utils/urlUtils";
 
 const Create = (props) => {
   const [composer, setComposer] = useState();
-  const [numNotes, setNumNotes] = useState(100);
+  const [numNotes, setNumNotes] = useState(250);
 
   // Page Navigation
   const [isLoading, setIsLoading] = useState(false);
@@ -36,7 +36,7 @@ const Create = (props) => {
       <div className="create text-center">
         <div className="composer-prompt-wrapper">
           <div className="composer-prompt">
-            Choose a <span className="red-text">Composer</span>
+            Choose a <span className="blue-text">Composer</span>
           </div>
           <div className="composer-choices">
             <div className="d-flex justify-content-center">
@@ -73,13 +73,14 @@ const Create = (props) => {
                     min={100}
                     max={400}
                     onChange={setNumNotes}
-                    railStyle={{ backgroundColor: "#EDA1A1", height: "6px" }}
-                    dotStyle={{ backgroundColor: "#CE1212", border: "1px solid #CE1212" }}
-                    activeDotStyle={{ backgroundColor: "#CE1212", border: "1px solid #CE1212" }}
+                    railStyle={{ backgroundColor: "#40A7FF", height: "6px" }}
+                    dotStyle={{ backgroundColor: "#000D6F", border: "1px solid #000D6F" }}
+                    activeDotStyle={{ backgroundColor: "#000D6F", border: "1px solid #000D6F" }}
                     handleStyle={[
-                      { backgroundColor: "#ffffff", border: "3px solid #CE1212", height: "18px", width: "18px" },
+                      { backgroundColor: "#ffffff", border: "3px solid #000D6F", height: "18px", width: "18px" },
                     ]}
-                    trackStyle={[{ backgroundColor: "#CE1212", height: "6px" }]}
+                    trackStyle={[{ backgroundColor: "#000D6F", height: "6px" }]}
+                    defaultValue={250}
                   />
                 </div>
               </div>
