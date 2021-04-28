@@ -17,13 +17,13 @@ const Create = (props) => {
   const handleGenerateClick = () => {
     setIsLoading(true);
     setTimeout(() => {
-        setIsLoading(false);
+      setIsLoading(false);
     }, 10000);
     // axios
     //   //   .get(getGenerateUrl(composer, numNotes))
     //   .get(getComposersUrl())
     //   .then((res) => {
-          
+
     //     console.log("res: ", res.data);
     //   })
     //   .catch((err) => {
@@ -39,25 +39,38 @@ const Create = (props) => {
             Choose a <span className="blue-text">Composer</span>
           </div>
           <div className="composer-choices">
-            <div className="d-flex justify-content-center">
-              <div
-                onClick={() => setComposer("chopin")}
-                className={`composer-choice ${composer === "chopin" && "selected"}`}
-              >
-                Chopin
+            <div className="row">
+              <div className="col-md-2"></div>
+              <div className="col-md-8">
+                <div className="row">
+                  <div className="col-md-4">
+                    <div
+                      onClick={() => setComposer("chopin")}
+                      className={`composer-choice ${composer === "chopin" && "selected"}`}
+                    >
+                      Chopin
+                    </div>
+                  </div>
+                  <div className="col-md-4">
+                    <div
+                      onClick={() => setComposer("rachmaninov")}
+                      className={`composer-choice ${composer === "rachmaninov" && "selected"}`}
+                    >
+                      Rachmaninov
+                    </div>
+                  </div>
+                  <div className="col-md-4">
+                    <div
+                      onClick={() => setComposer("tchaikovski")}
+                      className={`composer-choice ${composer === "tchaikovski" && "selected"}`}
+                    >
+                      Tchaikovsky
+                    </div>
+                  </div>
+                </div>
               </div>
-              <div
-                onClick={() => setComposer("rachmaninov")}
-                className={`composer-choice ${composer === "rachmaninov" && "selected"}`}
-              >
-                Rachmaninov
-              </div>
-              <div
-                onClick={() => setComposer("tchaikovski")}
-                className={`composer-choice ${composer === "tchaikovski" && "selected"}`}
-              >
-                Tchaikovski
-              </div>
+
+              <div className="col-md-2"></div>
             </div>
           </div>
         </div>

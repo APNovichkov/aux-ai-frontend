@@ -12,7 +12,7 @@ const Home = (props) => {
               Generate Music in the Style of{" "}
               <span className="blue-text word">
                 <span>Chopin</span>
-                <span>Tchaikovski</span>
+                <span>Tchaikovsky</span>
                 <span>Rachmaninov</span>
               </span>
             </div>
@@ -58,7 +58,7 @@ const Home = (props) => {
                     <div className="composer-item">Rachmaninov</div>
                   </div>
                   <div className="col-md-4">
-                    <div className="composer-item">Tchaikovski</div>
+                    <div className="composer-item">Tchaikovsky</div>
                   </div>
                 </div>
               </div>
