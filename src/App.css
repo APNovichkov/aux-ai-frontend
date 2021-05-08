@@ -237,7 +237,7 @@
 }
 
 .create .generate-button-wrapper{
-  margin-top: 80px;
+  margin-top: 60px;
 }
 
 .create .generate-button{
@@ -261,4 +261,12 @@
 
 .create .loading-gif{
   margin-left: 20px;
+}
+
+.create .player-wrapper{
+  margin-top: 60px;
+}
+
+.audio-element {
+  
 }

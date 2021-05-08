@@ -5,30 +5,36 @@ import Slider, { Range } from "rc-slider";
 import "rc-slider/assets/index.css";
 
 // Import utils
-import { getGenerateUrl, getComposersUrl } from "./../utils/urlUtils";
+import { getGenerateUrl, getMp3FileUrl } from "./../utils/urlUtils";
 
 const Create = (props) => {
   const [composer, setComposer] = useState();
   const [numNotes, setNumNotes] = useState(250);
+  const [fileId, setFileId] = useState("");
 
   // Page Navigation
   const [isLoading, setIsLoading] = useState(false);
 
-  const handleGenerateClick = () => {
+  const handleGenerateClick = (event) => {
+    setFileId(null);
+    event.preventDefault();
     setIsLoading(true);
-    setTimeout(() => {
-      setIsLoading(false);
-    }, 10000);
-    // axios
-    //   //   .get(getGenerateUrl(composer, numNotes))
-    //   .get(getComposersUrl())
-    //   .then((res) => {
+    axios
+      .get(getGenerateUrl(composer, numNotes))
+      .then((res) => {
+        console.log("res: ", res.data);
+        setFileId(res.data.song_id);
+        setIsLoading(false);
+      })
+      .catch((err) => {
+        console.log("err: ", err);
+        setIsLoading(false);
+      });
+  };
 
-    //     console.log("res: ", res.data);
-    //   })
-    //   .catch((err) => {
-    //     console.log("err: ", err);
-    //   });
+  const playMusic = () => {
+    const audioEl = document.getElementsByClassName("audio-element")[0];
+    audioEl.play();
   };
 
   return (
@@ -101,13 +107,19 @@ const Create = (props) => {
             </div>
           </div>
         </div>
+        {fileId && (
+          <div className="player-wrapper">
+            <audio controls className="audio-element">
+              <source src={getMp3FileUrl(fileId)}></source>
+            </audio>
+          </div>
+        )}
+
         <div className="generate-button-wrapper ">
           <div className="d-flex justify-content-center align-items-center">
-            <a href={getGenerateUrl(composer, numNotes)} className="generate-button">
-              <span onClick={handleGenerateClick}>Generate</span>
-            </a>
-            {/* <div onClick={handleGenerateClick} className="generate-button">Generate</div> */}
-
+            <div onClick={(event) => handleGenerateClick(event)} className="generate-button">
+              Generate
+            </div>
             {isLoading && (
               <div className="loading-gif">
                 <img src="/assets/images/Skateboarding.gif"></img>
