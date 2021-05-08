@@ -9,10 +9,11 @@ export const getMp3FileUrl = (fileId) => {
     return `${BASE_URL}/get-file/${fileId}`;
 }
 
-export const getSampleMp3Url = () => {
-    return `${BASE_URL}/sample`;
+export const getSampleMp3Url = (composer) => {
+    return `${BASE_URL}/${composer}/sample`;
 }
 
 export const getComposersUrl = () => {
     return `${BASE_URL}/composers`;
 }
+

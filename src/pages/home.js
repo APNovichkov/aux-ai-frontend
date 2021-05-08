@@ -1,7 +1,38 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
+import axios from "axios";
+
+// Import Utils
+import { getSampleMp3Url } from "./../utils/urlUtils";
 
 const Home = (props) => {
+  const [selectedComposer, setSelectedComposer] = useState("chopin");
+  const [isPlaying, setIsPlaying] = useState(false);
+
+  const handleComposerClick = (composer) => {
+    console.log("Handling composer click: ", composer);
+
+    setSelectedComposer(composer);
+    var x = document.getElementById("myAudio");
+
+    if (isPlaying){
+      x.pause();
+      setIsPlaying(false);
+    }else{
+      x.play();
+      setIsPlaying(true);
+    }
+    
+
+    // if (composer === selectedComposer) {
+    //   var x = document.getElementById("myAudio");
+    //   x.stop();
+    //   setSelectedComposer(null);
+    // } else {
+
+    // }
+  };
+
   return (
     <div className="home-wrapper">
       <div className="home">
@@ -29,37 +60,40 @@ const Home = (props) => {
           </div>
           <div className="col-md-2"></div>
         </div>
-        <div className="about-wrapper">
-          <div className="row">
-            <div className="col-md-1"></div>
-            <div className="col-md-10 text-center">
-              <div className="header">About</div>
-              <div className="description">
-                Aux.ai is powered by an LSTM Deep Learning Model and was trained on music datasets of multiple
-                composers, using only the piano part as training data
-              </div>
-            </div>
-            <div className="col-md-1"></div>
-          </div>
-        </div>
+
         <div className="composers-wrapper text-center">
           <div className="composers">
             <span className="fas fa-user"></span> Composers
+          </div>
+          <div className="composers-description">
+            The behind the scenes Deep Learning model was trained on musical pieces of these composers, focusing on the
+            piano part in the training MIDI files. Click each card to hear a sample of what the model generated.
           </div>
           <div className="composer-list-wrapper">
             <div className="row">
               <div className="col-md-2"></div>
               <div className="col-md-8">
                 <div className="row">
-                  <div className="col-md-4">
-                    <div className="composer-item">Chopin</div>
+                  <div className="col-xl-4">
+                    <div onClick={() => handleComposerClick("chopin")} className="composer-item">
+                      {isPlaying && selectedComposer === "chopin" ? (<span className="far fa-stop-circle"></span> ) : (<span className="far fa-play-circle"></span> )}{" "}Chopin
+                    </div>
                   </div>
-                  <div className="col-md-4">
-                    <div className="composer-item">Rachmaninov</div>
+                  <div className="col-xl-4">
+                    <div className="composer-item">
+                      <span className="far fa-play-circle"></span> Rachmaninov
+                    </div>
                   </div>
-                  <div className="col-md-4">
-                    <div className="composer-item">Tchaikovsky</div>
+                  <div className="col-xl-4">
+                    <div className="composer-item">
+                      <span className="far fa-play-circle"></span> Tchaikovsky
+                    </div>
                   </div>
+                  {selectedComposer && (
+                    <audio id="myAudio" className="sample-audio-player">
+                      <source src={getSampleMp3Url(selectedComposer)} />
+                    </audio>
+                  )}
                 </div>
               </div>
 

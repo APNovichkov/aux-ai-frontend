@@ -92,13 +92,13 @@ const Create = (props) => {
                     min={100}
                     max={400}
                     onChange={setNumNotes}
-                    railStyle={{ backgroundColor: "#40A7FF", height: "6px" }}
-                    dotStyle={{ backgroundColor: "#000D6F", border: "1px solid #000D6F" }}
-                    activeDotStyle={{ backgroundColor: "#000D6F", border: "1px solid #000D6F" }}
+                    railStyle={{ backgroundColor: "#000D6F", height: "6px" }}
+                    dotStyle={{ backgroundColor: "#439dec", border: "1px solid #000D6F" }}
+                    activeDotStyle={{ backgroundColor: "#439dec", border: "1px solid #000D6F" }}
                     handleStyle={[
                       { backgroundColor: "#ffffff", border: "3px solid #000D6F", height: "18px", width: "18px" },
                     ]}
-                    trackStyle={[{ backgroundColor: "#000D6F", height: "6px" }]}
+                    trackStyle={[{ backgroundColor: "#439dec", height: "6px" }]}
                     defaultValue={250}
                   />
                 </div>
