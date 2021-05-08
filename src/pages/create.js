@@ -1,8 +1,10 @@
 import React, { useState } from "react";
 import axios from "axios";
-
 import Slider, { Range } from "rc-slider";
 import "rc-slider/assets/index.css";
+
+// Import Components
+import LoadingCard from "./../components/loadingCard";
 
 // Import utils
 import { getGenerateUrl, getMp3FileUrl } from "./../utils/urlUtils";
@@ -120,13 +122,12 @@ const Create = (props) => {
             <div onClick={(event) => handleGenerateClick(event)} className="generate-button">
               Generate
             </div>
-            {isLoading && (
-              <div className="loading-gif">
-                <img src="/assets/images/Skateboarding.gif"></img>
-              </div>
-            )}
+            
           </div>
         </div>
+        {isLoading && (
+              <LoadingCard/>
+            )}
       </div>
     </div>
   );
