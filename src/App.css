@@ -312,7 +312,7 @@
 
 /* LOADING CARD */
 
-.loading-card-wrapper{
+.card-overlay{
   text-align: center;
   width: 100%;
   height: 100%;
@@ -322,17 +322,28 @@
   left: 0;
   top: 0;
   position: fixed;
-  background-color: #ffffff;
-  opacity: 100%;
+  background-color: rgba(255,255,255,0.9);
+  opacity: .8;
 }
 
-.loading-card{
-  opacity: 100%;
-  width: 800px;
-  height: 500px;
+.overlay-card-wrapper{
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 800;
+  position: fixed;
+  justify-content: center;
+  align-items: center;
+}
+
+.overlay-card{
+  margin: auto;
+  max-width: 700px;
   height: auto;
-  display: block;
   z-index: 999;
+  top: 30vh;
+  position: relative;
   background-color: #094568;
   border: 1px solid #094568;
   border-radius: 10px;
@@ -340,35 +351,60 @@
   color: #10375c;
   text-align: center;
   padding: 20px;
-  padding-bottom: 80px;
+  padding-bottom: 60px;
   padding-top: 30px;
-  
 }
 
-.loading-card .header{
+.overlay-card .header{
   font-size: 40px;
   font-weight: 800;
   color: #ffffff;
 }
 
-.loading-card .description{
+.overlay-card .description{
   font-size: 20px;
   font-weight: 600;
   color: #ffffff;
   margin-top: 10px;
 }
 
-.loading-card .animation{
+.overlay-card .animation{
   text-align: left;
 }
 
-.loading-card .loading-gif{
+.overlay-card .loading-gif{
   margin-top:30px;
   color: #ffffff;
   font-size: 40px;
 }
 
-.loading-card .loading-gif{
+.overlay-card .audio-element{
+  margin-top: 45px;
+}
+
+.overlay-card .generate-more-wrapper{
+  margin-top: 45px;
+}
+
+.overlay-card .generate-more-button{
+  background-color: #eeeeee;
+  padding: 10px;
+  padding-left: 15px;
+  padding-right: 15px;
+  border-radius: 10px;
+  color: #094568;
+  transition: .2s;
+}
+
+.overlay-card .generate-more-button:hover{
+  padding-left: 25px;
+  padding-right: 25px;
+  background-color: rgb(231, 236, 240);
+  cursor: pointer;
+  border-radius: 20px;
+}
+
+.overlay-card .loading-gif{
   animation: spinHorizontal 4s linear infinite;
   /* animation: travelHorizontal 4s linear infinite; */
   /* animation: colors 4s linear infinite; */
