@@ -20,7 +20,6 @@ const Create = (props) => {
   const handleGenerateClick = (event) => {
     console.log("Generating music")
     setFileId(null);
-    event.preventDefault();
     setIsLoading(true);
     axios
       .get(getGenerateUrl(composer, numNotes))
