@@ -33,7 +33,23 @@
   font-weight: 500;
   font-size: 18px;
   margin-left: 15px;
+  margin-right: 15px;
+  transition: .1s;
 }
+
+.navbar-wrapper .aux-navbar .link:hover{
+  background-color: #f2f8fd;
+  padding: 10px;
+  border-radius: 10px;
+  text-decoration: none;
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+.navbar-wrapper .aux-navbar a:hover{
+  text-decoration: none;
+}
+
 
 /* FOOTER STUFF */
 

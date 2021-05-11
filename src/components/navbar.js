@@ -16,8 +16,12 @@ const Navbar = (props) => {
 							<Link to={'/about'}>
 								<div className="link">about</div>
 							</Link>
-							<div className="link">github</div>
-							<div className="link">support</div>
+							<a href="https://github.com/APNovichkov/aux-ai-api">
+								<div className="link">github</div>
+							</a>
+							<a href={'https://www.buymeacoffee.com/andreynovichkov'}>
+								<div className="link">support</div>
+							</a>
 						</div>
 					</div>
 				</div>

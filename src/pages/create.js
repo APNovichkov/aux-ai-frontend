@@ -10,7 +10,7 @@ import LoadingCard from "./../components/loadingCard";
 import { getGenerateUrl, getMp3FileUrl } from "./../utils/urlUtils";
 
 const Create = (props) => {
-  const [composer, setComposer] = useState();
+  const [composer, setComposer] = useState("chopin");
   const [numNotes, setNumNotes] = useState(250);
   const [fileId, setFileId] = useState("");
 
@@ -51,7 +51,7 @@ const Create = (props) => {
               <div className="col-md-2"></div>
               <div className="col-md-8">
                 <div className="row">
-                  <div className="col-md-4">
+                  <div className="col-xl-4">
                     <div
                       onClick={() => setComposer("chopin")}
                       className={`composer-choice ${composer === "chopin" && "selected"}`}
@@ -59,7 +59,7 @@ const Create = (props) => {
                       Chopin
                     </div>
                   </div>
-                  <div className="col-md-4">
+                  <div className="col-xl-4">
                     <div
                       onClick={() => setComposer("rachmaninov")}
                       className={`composer-choice ${composer === "rachmaninov" && "selected"}`}
@@ -67,7 +67,7 @@ const Create = (props) => {
                       Rachmaninov
                     </div>
                   </div>
-                  <div className="col-md-4">
+                  <div className="col-xl-4">
                     <div
                       onClick={() => setComposer("tchaikovsky")}
                       className={`composer-choice ${composer === "tchaikovsky" && "selected"}`}
