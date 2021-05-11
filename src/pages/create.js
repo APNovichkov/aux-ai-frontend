@@ -126,9 +126,13 @@ const Create = (props) => {
             
           </div>
         </div>
-        {isLoading && (
+        {/* {isLoading && (
               <LoadingCard/>
-            )}
+            )} */}
+
+        {isLoading && (
+          <div>GENERATING</div>
+        )}
       </div>
     </div>
   );
