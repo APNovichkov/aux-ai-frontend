@@ -18,6 +18,7 @@ const Create = (props) => {
   const [isLoading, setIsLoading] = useState(false);
 
   const handleGenerateClick = (event) => {
+    console.log("Generating music")
     setFileId(null);
     event.preventDefault();
     setIsLoading(true);
