@@ -6,7 +6,7 @@ const LoadingCard = (props) => {
       <div className="loading-card">
         <div className="header">Generating Your Song</div>
         <div className="description">
-          This takes a little bit of time because the model is large, so please be patient!
+          This will take a couple of seconds, please be patient!
         </div>
         <div className="animation">
           <div className="loading-gif">

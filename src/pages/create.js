@@ -69,8 +69,8 @@ const Create = (props) => {
                   </div>
                   <div className="col-md-4">
                     <div
-                      onClick={() => setComposer("tchaikovski")}
-                      className={`composer-choice ${composer === "tchaikovski" && "selected"}`}
+                      onClick={() => setComposer("tchaikovsky")}
+                      className={`composer-choice ${composer === "tchaikovsky" && "selected"}`}
                     >
                       Tchaikovsky
                     </div>
@@ -111,6 +111,7 @@ const Create = (props) => {
         </div>
         {fileId && (
           <div className="player-wrapper">
+            <div className="header">Here is your unique song!</div>
             <audio controls className="audio-element">
               <source src={getMp3FileUrl(fileId)}></source>
             </audio>

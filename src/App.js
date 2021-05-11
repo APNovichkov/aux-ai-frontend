@@ -3,10 +3,15 @@ import { HashRouter as Router, Switch, Route, Link, Redirect } from "react-route
 
 import './App.css';
 
-import Navbar from "./components/navbar";
-import Footer from "./components/footer";
+// Import Pages
 import Home from "./pages/home";
 import Create from "./pages/create";
+import About from "./pages/about";
+
+// Import Components
+import Navbar from "./components/navbar";
+import Footer from "./components/footer";
+
 
 function App() {
   return (
@@ -18,6 +23,7 @@ function App() {
             <div className="app-content">
               <Route path="/" exact component={Home}></Route>
               <Route path="/create" exact component={Create}/>
+              <Route path="/about" exact component={About}></Route>
             </div>
             <Footer/>
           </div>
